@@ -374,7 +374,7 @@ const App = {
     closeAllModals(); this.stopAll();
     const setup = mode === 'setup';
     $('#root').innerHTML = `<div class="login"><form class="box" autocomplete="on">
-      <img class="lg" src="/static/logo.svg" alt="">
+      <img class="lg" src="/static/logo-full.svg" alt="Mercan">
       ${setup ? '<p class="mu" style="margin:0 0 14px;text-align:center">Yönetici parolası belirleyin (en az 8 karakter)</p>' : ''}
       <label class="fld"><span>Parola</span><input class="inp" type="password" name="pw" autocomplete="${setup ? 'new-password' : 'current-password'}" autofocus></label>
       ${setup ? '<label class="fld"><span>Parola (tekrar)</span><input class="inp" type="password" name="pw2" autocomplete="new-password"></label>' : ''}
@@ -402,7 +402,7 @@ const App = {
     Live.first = true; Live.nodes = {};
     const navHtml = this.nav.map(it => it === '-' ? '<hr>' : `<a href="#/${it[0]}" data-id="${it[0]}">${icon(it[2])}<span>${it[1]}</span><b class="cnt hide" data-cnt="${it[0]}"></b></a>`).join('');
     $('#root').innerHTML = `<div class="app">
-      <aside class="side"><div class="brand"><img src="/static/logo.svg" alt=""></div><nav class="nav">${navHtml}</nav></aside>
+      <aside class="side"><div class="brand"><img class="b-full" src="/static/logo-full.svg" alt="Mercan"><img class="b-mark" src="/static/logo.svg" alt=""></div><nav class="nav">${navHtml}</nav></aside>
       <header class="top"><h1 id="ptitle"></h1><span class="grow"></span>
         <span class="demo-tag hide" id="demo-tag">DEMO</span><span class="hstat" id="hstat"></span>
         <button class="btn ghost ic" id="out-btn" title="Çıkış">${icon('logout')}</button></header>

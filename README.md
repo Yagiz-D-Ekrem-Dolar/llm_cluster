@@ -15,11 +15,27 @@ talebe göre yönetir ve sonucu hosting'deki sitenize verir. Sohbet, konuşma �
 * Mobil modemler çoğunlukla CGNAT arkasındadır, dışarıdan içeri port açılamaz. Bu yüzden bağlantıyı **küme başlatır**; modemde ayar gerekmez.
 * Model dosyası modemden **bir kez** iner. Makinelere switch üzerinden gider; makineler birbirinden de alır.
 
+## Ekran görüntüleri
+
+Görüntüler demo modunda, simüle edilmiş makinelerle alınmıştır.
+
+| Genel bakış | Ağ |
+|---|---|
+| ![Genel bakış](docs/screenshots/genel-bakis.png) | ![Ağ](docs/screenshots/ag.png) |
+| **Site bağlantısı** | **Servisler** |
+| ![Site bağlantısı](docs/screenshots/site-baglantisi.png) | ![Servisler](docs/screenshots/servisler.png) |
+| **Dağıtım** | **Runtime'lar** |
+| ![Dağıtım](docs/screenshots/dagitim.png) | ![Runtime'lar](docs/screenshots/runtimeler.png) |
+| **Sunucular** | |
+| ![Sunucular](docs/screenshots/sunucular.png) | |
+
 ## Kurulum
 
 ### 1. Ana PC
 
-Windows:
+Windows masaüstü uygulaması: `build_app.bat` çalıştırın, `dist\Mercan\Mercan.exe` oluşur. Klasörün tamamı başka bilgisayara kopyalanabilir, Python gerekmez. Veriler `%LOCALAPPDATA%\KumeYonetimi` altında durur.
+
+Kaynaktan çalıştırmak için:
 
 ```bat
 start.bat
