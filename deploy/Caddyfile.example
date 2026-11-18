@@ -1,0 +1,19 @@
+# Genel API ağ geçidini (127.0.0.1:8081) HTTPS ile internete açan örnek Caddy yapılandırması.
+# install_controller.sh --domain ... bunu otomatik yazar; elle kurmak için /etc/caddy/Caddyfile'a ekleyin.
+#
+# Önemli:
+#  * flush_interval -1  : akışlı (SSE) yanıtlar tamponlanmadan iletilir
+#  * uzun zaman aşımları: model yüklenirken (soğuk başlatma) istek dakikalarca bekleyebilir
+#  * Yalnızca genel ağ geçidi (8081) yayınlanır; yönetim paneli (8080) ASLA yayınlanmaz.
+api.sirketiniz.com {
+    reverse_proxy 127.0.0.1:8081 {
+        flush_interval -1
+        transport http {
+            response_header_timeout 15m
+            read_timeout 15m
+        }
+    }
+    request_body {
+        max_size 50MB
+    }
+}

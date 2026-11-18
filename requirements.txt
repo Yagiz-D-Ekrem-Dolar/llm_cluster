@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn>=0.29
+httpx>=0.27
+python-multipart>=0.0.9
+psutil>=5.9
+# makineleri ağdan kurmak için (SSH)
+asyncssh>=2.14
+# HuggingFace'e veri seti göndermek için (yoksa yalnızca dry-run çalışır)
+huggingface_hub>=0.23
